@@ -13,24 +13,9 @@ namespace FDJAnalyzer
 
         private void form_Load(object sender, EventArgs e)
         {
-            comboBox_euromillions_filter_dateType.Items.AddRange(EuroMillions.dateTypes);
-            comboBox_euromillions_filter_dateType.SelectedIndex = 0;
+            EuroMillionsFormController euroMillionsFormController = new EuroMillionsFormController(this, numericUpDown_euromillions_filter_id, comboBox_euromillions_filter_dateType, dateTimePicker_euromillions_filter_date, dateTimePicker_euromillions_filter_toDate, checkBox_euromillions_filter_all, checkBox_euromillions_filter_hasWinner, label_euromilions_filter_resultCount, button_euromillions_filter_ok, listView_euromillions_results_draws, listView_euromillions_stats_balls, listView_euromillions_stats_stars);
         }
-
-        private void checkBox_euromillions_filter_all_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox checkBox = (CheckBox)sender;
-            checkBox_euromillions_filter_hasWinner.Visible = !checkBox.Checked;
-        }
-
-        private void comboBox_euromillions_filter_dateType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ComboBox comboBox = (ComboBox)sender;
-            EuroMillions.DateType dateType = (EuroMillions.DateType)comboBox.SelectedIndex;
-            dateTimePicker_euromillions_filter_date.Visible = dateType != EuroMillions.DateType.All;
-            dateTimePicker_euromillions_filter_toDate.Visible = dateType == EuroMillions.DateType.Between;
-            if (dateTimePicker_euromillions_filter_toDate.Visible) { dateTimePicker_euromillions_filter_toDate.BringToFront(); }
-        }
+        /*
 
         private void button_euromillions_filter_ok_Click(object sender, EventArgs e)
         {
@@ -175,6 +160,6 @@ namespace FDJAnalyzer
             });
 
 
-        }
+        }*/
     }
 }

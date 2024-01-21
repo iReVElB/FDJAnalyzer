@@ -2,7 +2,7 @@ namespace FDJAnalyzer
 {
     internal static class Program
     {
-        public static EuroMillions euroMillions = new EuroMillions();
+        public static EuroMillionsManager euroMillions = new EuroMillionsManager();
         [STAThread]
 
         static void Main()

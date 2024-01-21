@@ -41,9 +41,11 @@
             listView_euromillions_stats_stars = new ListView();
             columnHeader1 = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
+            columnHeader4 = new ColumnHeader();
             listView_euromillions_stats_balls = new ListView();
             columnHeader_boules = new ColumnHeader();
             columnHeader_per = new ColumnHeader();
+            columnHeader3 = new ColumnHeader();
             panel_euromillions_filter = new Panel();
             panel4 = new Panel();
             checkBox_euromillions_filter_hasWinner = new CheckBox();
@@ -169,12 +171,12 @@
             // 
             // listView_euromillions_stats_stars
             // 
-            listView_euromillions_stats_stars.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2 });
+            listView_euromillions_stats_stars.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader4 });
             listView_euromillions_stats_stars.Dock = DockStyle.Left;
             listView_euromillions_stats_stars.FullRowSelect = true;
-            listView_euromillions_stats_stars.Location = new Point(352, 2);
+            listView_euromillions_stats_stars.Location = new Point(462, 2);
             listView_euromillions_stats_stars.Name = "listView_euromillions_stats_stars";
-            listView_euromillions_stats_stars.Size = new Size(350, 874);
+            listView_euromillions_stats_stars.Size = new Size(460, 874);
             listView_euromillions_stats_stars.TabIndex = 1;
             listView_euromillions_stats_stars.UseCompatibleStateImageBehavior = false;
             listView_euromillions_stats_stars.View = View.Details;
@@ -189,14 +191,19 @@
             columnHeader2.Text = "% de sorties";
             columnHeader2.Width = 150;
             // 
+            // columnHeader4
+            // 
+            columnHeader4.Text = "Nombre de sorties";
+            columnHeader4.Width = 180;
+            // 
             // listView_euromillions_stats_balls
             // 
-            listView_euromillions_stats_balls.Columns.AddRange(new ColumnHeader[] { columnHeader_boules, columnHeader_per });
+            listView_euromillions_stats_balls.Columns.AddRange(new ColumnHeader[] { columnHeader_boules, columnHeader_per, columnHeader3 });
             listView_euromillions_stats_balls.Dock = DockStyle.Left;
             listView_euromillions_stats_balls.FullRowSelect = true;
             listView_euromillions_stats_balls.Location = new Point(2, 2);
             listView_euromillions_stats_balls.Name = "listView_euromillions_stats_balls";
-            listView_euromillions_stats_balls.Size = new Size(350, 874);
+            listView_euromillions_stats_balls.Size = new Size(460, 874);
             listView_euromillions_stats_balls.TabIndex = 0;
             listView_euromillions_stats_balls.UseCompatibleStateImageBehavior = false;
             listView_euromillions_stats_balls.View = View.Details;
@@ -210,6 +217,11 @@
             // 
             columnHeader_per.Text = "% de sorties";
             columnHeader_per.Width = 150;
+            // 
+            // columnHeader3
+            // 
+            columnHeader3.Text = "Nombre de sorties";
+            columnHeader3.Width = 180;
             // 
             // panel_euromillions_filter
             // 
@@ -259,7 +271,6 @@
             checkBox_euromillions_filter_all.TabIndex = 4;
             checkBox_euromillions_filter_all.Text = "Tous";
             checkBox_euromillions_filter_all.UseVisualStyleBackColor = true;
-            checkBox_euromillions_filter_all.CheckedChanged += checkBox_euromillions_filter_all_CheckedChanged;
             // 
             // label3
             // 
@@ -310,7 +321,6 @@
             comboBox_euromillions_filter_dateType.Name = "comboBox_euromillions_filter_dateType";
             comboBox_euromillions_filter_dateType.Size = new Size(151, 31);
             comboBox_euromillions_filter_dateType.TabIndex = 7;
-            comboBox_euromillions_filter_dateType.SelectedIndexChanged += comboBox_euromillions_filter_dateType_SelectedIndexChanged;
             // 
             // label2
             // 
@@ -381,7 +391,6 @@
             button_euromillions_filter_ok.TabIndex = 0;
             button_euromillions_filter_ok.Text = "Filtrer";
             button_euromillions_filter_ok.UseVisualStyleBackColor = true;
-            button_euromillions_filter_ok.Click += button_euromillions_filter_ok_Click;
             // 
             // form
             // 
@@ -443,5 +452,7 @@
         private ListView listView_euromillions_stats_stars;
         private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;
+        private ColumnHeader columnHeader4;
+        private ColumnHeader columnHeader3;
     }
 }
