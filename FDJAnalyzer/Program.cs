@@ -2,13 +2,19 @@ namespace FDJAnalyzer
 {
     internal static class Program
     {
-        public static EuroMillionsManager euroMillions = new EuroMillionsManager();
         [STAThread]
 
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new form());
+            form form = new form();
+            form.FormClosing += Form_FormClosing;
+            Application.Run(form);
+        }
+
+        private static void Form_FormClosing(object? sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
