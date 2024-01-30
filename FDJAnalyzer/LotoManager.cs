@@ -10,10 +10,10 @@ using System.Web;
 
 namespace FDJAnalyzer
 {
-    internal class EuroMillionsManager
+    internal class LotoManager
     {
         public static string[] DateTypes = { "Toutes", "Le", "Entre", "Après", "Avant" };
-        private static string base_link_api = "http://127.0.0.1:4000/api/euromillions/draws";
+        private static string base_link_api = "http://127.0.0.1:4000/api/loto/draws";
 
         public async Task<Result> GetResult(Parameters? parameters)
         {
@@ -28,7 +28,7 @@ namespace FDJAnalyzer
                 {
                     Draw draw = draws[i];
                     int[]? balls = draw.balls;
-                    int[]? stars = draw.stars;
+                    int? star = draw.star;
                     if(balls != null)
                     {
                         for(int b = 0; b < balls.Length; b++)
@@ -39,15 +39,12 @@ namespace FDJAnalyzer
                             stats.total++;
                         }
                     }
-                    if(stars != null)
+                    if (star != null)
                     {
-                        for(int s = 0; s < stars.Length; s++)
-                        {
-                            int star = stars[s];
-                            Result.Stats stats = result.starsStats;
-                            if (stars_count.ContainsKey(star)) { stars_count[star]++; } else { stars_count.Add(star, 1); }
-                            stats.total++;
-                        }
+                        
+                        Result.Stats stats = result.starsStats;
+                        if (stars_count.ContainsKey((int)star)) { stars_count[(int)star]++; } else { stars_count.Add((int)star, 1); }
+                        stats.total++;
                     }
                 }
                 for(int i = 0; i < balls_count.Count; i++)
@@ -125,7 +122,7 @@ namespace FDJAnalyzer
             public string? date { get; set; }
             public bool? hasWinner { get; set; }
             public int[]? balls { get; set; }
-            public int[]? stars { get; set; }
+            public int? star { get; set; }
         }
 
     }

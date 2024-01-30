@@ -8,7 +8,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace FDJAnalyzer
 {
-    internal class EuromillionsFormController
+    internal class LotoFormController
     {
         private form form;
         private NumericUpDown numericUpDown_id;
@@ -23,10 +23,10 @@ namespace FDJAnalyzer
         private ListView listView_stats_balls;
         private ListView listView_stats_stars;
 
-        private EuroMillionsManager euroMillionsManager = new EuroMillionsManager();
+        private LotoManager lotoManager = new LotoManager();
 
-        private EuroMillionsManager.Result? results = null;
-        private List<EuroMillionsManager.Draw>? draws = null;
+        private LotoManager.Result? results = null;
+        private List<LotoManager.Draw>? draws = null;
         private List<KeyValuePair<int, KeyValuePair<int, float>>>? ballsStats = null;
         private List<KeyValuePair<int, KeyValuePair<int, float>>>? starsStats = null;
 
@@ -36,7 +36,7 @@ namespace FDJAnalyzer
         private bool b_statsBalls_per = true;
         private bool b_statsStars_balls = true;
         private bool b_statsStars_per = true;
-        public EuromillionsFormController(form form, NumericUpDown numericUpDown_id, ComboBox comboBox_dateType, DateTimePicker dateTimePicker_date, DateTimePicker dateTimePicker_toDate, CheckBox checkBox_hasWinner_all, CheckBox checkBox_hasWinner, Label label_results_count, Button button_filter, ListView listView_draws, ListView listView_stats_balls, ListView listView_stats_stars) { 
+        public LotoFormController(form form, NumericUpDown numericUpDown_id, ComboBox comboBox_dateType, DateTimePicker dateTimePicker_date, DateTimePicker dateTimePicker_toDate, CheckBox checkBox_hasWinner_all, CheckBox checkBox_hasWinner, Label label_results_count, Button button_filter, ListView listView_draws, ListView listView_stats_balls, ListView listView_stats_stars) { 
             this.form = form;
             this.numericUpDown_id = numericUpDown_id;
             this.comboBox_dateType = comboBox_dateType;
@@ -52,9 +52,9 @@ namespace FDJAnalyzer
             this.initComponents();
         }
 
-        private async Task setResults(EuroMillionsManager.Parameters? parameters)
+        private async Task setResults(LotoManager.Parameters? parameters)
         {
-            EuroMillionsManager.Result result = await euroMillionsManager.GetResult(parameters);
+            LotoManager.Result result = await lotoManager.GetResult(parameters);
             this.results = result;
             this.draws = result.draws;
             this.ballsStats = result.ballsStats.stats;
@@ -66,7 +66,7 @@ namespace FDJAnalyzer
             {
                 if (reverse != null) { this.b_draws_date = (bool)reverse; } else { this.b_draws_date = !this.b_draws_date; } 
                 reverse = reverse != null ? reverse : this.b_draws_date;
-                this.draws.Sort(delegate (EuroMillionsManager.Draw x, EuroMillionsManager.Draw y)
+                this.draws.Sort(delegate (LotoManager.Draw x, LotoManager.Draw y)
                 {
                     return x.date != null && y.date != null ? x.date.CompareTo(y.date) : -1;
                 });
@@ -79,7 +79,7 @@ namespace FDJAnalyzer
             {
                 if (reverse != null){ this.b_draws_winner = (bool)reverse;} else { this.b_draws_winner = !this.b_draws_winner; }
                 reverse = reverse != null ? reverse : this.b_draws_winner;
-                this.draws.Sort(delegate (EuroMillionsManager.Draw x, EuroMillionsManager.Draw y)
+                this.draws.Sort(delegate (LotoManager.Draw x, LotoManager.Draw y)
                 {
                     return x.hasWinner != null && y.hasWinner != null ? ((bool)x.hasWinner ? 1 : 0) - ((bool)y.hasWinner ? 1 : 0) : -1;
                 });
@@ -92,9 +92,9 @@ namespace FDJAnalyzer
             if(this.draws != null)
             {
                 List<ListViewItem> listViewItems = new List<ListViewItem>();
-                for (int i = 0; i < this.draws.Count; i++) { 
-                    EuroMillionsManager.Draw draw = this.draws[i];
-                    string[] s = { draw.date != null ? draw.date.ToString() : "?", draw.balls != null ? System.String.Join(" ", draw.balls) : "?", draw.stars != null ? System.String.Join(" ", draw.stars) : "?", draw.hasWinner != null ? draw.hasWinner.ToString().Replace("True", "Oui").Replace("False", "Non") : "?" };
+                for (int i = 0; i < this.draws.Count; i++) {
+                    LotoManager.Draw draw = this.draws[i];
+                    string[] s = { draw.date != null ? draw.date.ToString() : "?", draw.balls != null ? System.String.Join(" ", draw.balls) : "?", draw.star != null ? draw.star.ToString() : "?", draw.hasWinner != null ? draw.hasWinner.ToString().Replace("True", "Oui").Replace("False", "Non") : "?" };
                     listViewItems.Add(new ListViewItem(s));
                 }
                 this.listView_draws.Items.AddRange(listViewItems.ToArray());
@@ -244,11 +244,11 @@ namespace FDJAnalyzer
             DateOnly toDate = DateOnly.FromDateTime(this.dateTimePicker_toDate.Value);
             bool hasWinner_all = this.checkBox_hasWinner_all.Checked;
             bool hasWinner = this.checkBox_hasWinner.Checked;
-            EuroMillionsManager.Parameters parameters = new EuroMillionsManager.Parameters
+            LotoManager.Parameters parameters = new LotoManager.Parameters
             {
                 Id = id > 0 ? id : null,
                 HasWinner = hasWinner_all ? null : hasWinner ? 1 : 0,
-                DateType = date_type > 0 ? (EuroMillionsManager.DateType)date_type - 1 : null,
+                DateType = date_type > 0 ? (LotoManager.DateType)date_type - 1 : null,
                 Date = date_type > 0 ? date : null,
                 ToDate = date_type > 0 && date_type == (int)EuroMillionsManager.DateType.Between ? toDate : null
             };

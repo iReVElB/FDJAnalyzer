@@ -37,7 +37,7 @@
             columnHeader_balls = new ColumnHeader();
             columnHeader_stars = new ColumnHeader();
             columnHeader_has_winner = new ColumnHeader();
-            tabPage4 = new TabPage();
+            tabPage_euromillions_stats = new TabPage();
             listView_euromillions_stats_stars = new ListView();
             columnHeader1 = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
@@ -62,22 +62,66 @@
             panel1 = new Panel();
             label_euromilions_filter_resultCount = new Label();
             button_euromillions_filter_ok = new Button();
+            tabPage2 = new TabPage();
+            tabControl1 = new TabControl();
+            tabPage5 = new TabPage();
+            listView_loto_results_draws = new ListView();
+            columnHeader5 = new ColumnHeader();
+            columnHeader6 = new ColumnHeader();
+            columnHeader7 = new ColumnHeader();
+            columnHeader8 = new ColumnHeader();
+            tabPage_loto_stats = new TabPage();
+            listView_loto_stats_stars = new ListView();
+            columnHeader9 = new ColumnHeader();
+            columnHeader10 = new ColumnHeader();
+            columnHeader11 = new ColumnHeader();
+            listView_loto_stats_balls = new ListView();
+            columnHeader12 = new ColumnHeader();
+            columnHeader13 = new ColumnHeader();
+            columnHeader14 = new ColumnHeader();
+            panel5 = new Panel();
+            panel6 = new Panel();
+            checkBox_loto_filter_hasWinner = new CheckBox();
+            checkBox_loto_filter_all = new CheckBox();
+            label4 = new Label();
+            panel7 = new Panel();
+            dateTimePicker_loto_filter_toDate = new DateTimePicker();
+            dateTimePicker_loto_filter_date = new DateTimePicker();
+            comboBox_loto_filter_dateType = new ComboBox();
+            label5 = new Label();
+            panel8 = new Panel();
+            numericUpDown_loto_filter_id = new NumericUpDown();
+            label6 = new Label();
+            panel9 = new Panel();
+            label_loto_filter_resultCount = new Label();
+            button_loto_filter_ok = new Button();
             tabControl_base.SuspendLayout();
             tabPage1.SuspendLayout();
             tabControl_euromillions.SuspendLayout();
             tabPage3.SuspendLayout();
-            tabPage4.SuspendLayout();
+            tabPage_euromillions_stats.SuspendLayout();
             panel_euromillions_filter.SuspendLayout();
             panel4.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_euromillions_filter_id).BeginInit();
             panel1.SuspendLayout();
+            tabPage2.SuspendLayout();
+            tabControl1.SuspendLayout();
+            tabPage5.SuspendLayout();
+            tabPage_loto_stats.SuspendLayout();
+            panel5.SuspendLayout();
+            panel6.SuspendLayout();
+            panel7.SuspendLayout();
+            panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown_loto_filter_id).BeginInit();
+            panel9.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl_base
             // 
             tabControl_base.Controls.Add(tabPage1);
+            tabControl_base.Controls.Add(tabPage2);
             tabControl_base.Dock = DockStyle.Fill;
             tabControl_base.Location = new Point(0, 0);
             tabControl_base.Margin = new Padding(2);
@@ -102,7 +146,7 @@
             // tabControl_euromillions
             // 
             tabControl_euromillions.Controls.Add(tabPage3);
-            tabControl_euromillions.Controls.Add(tabPage4);
+            tabControl_euromillions.Controls.Add(tabPage_euromillions_stats);
             tabControl_euromillions.Dock = DockStyle.Fill;
             tabControl_euromillions.Location = new Point(2, 191);
             tabControl_euromillions.Margin = new Padding(2);
@@ -156,18 +200,18 @@
             columnHeader_has_winner.Text = "Gagnant";
             columnHeader_has_winner.Width = 100;
             // 
-            // tabPage4
+            // tabPage_euromillions_stats
             // 
-            tabPage4.Controls.Add(listView_euromillions_stats_stars);
-            tabPage4.Controls.Add(listView_euromillions_stats_balls);
-            tabPage4.Location = new Point(4, 32);
-            tabPage4.Margin = new Padding(2);
-            tabPage4.Name = "tabPage4";
-            tabPage4.Padding = new Padding(2);
-            tabPage4.Size = new Size(1000, 878);
-            tabPage4.TabIndex = 1;
-            tabPage4.Text = "Statistiques";
-            tabPage4.UseVisualStyleBackColor = true;
+            tabPage_euromillions_stats.Controls.Add(listView_euromillions_stats_stars);
+            tabPage_euromillions_stats.Controls.Add(listView_euromillions_stats_balls);
+            tabPage_euromillions_stats.Location = new Point(4, 29);
+            tabPage_euromillions_stats.Margin = new Padding(2);
+            tabPage_euromillions_stats.Name = "tabPage_euromillions_stats";
+            tabPage_euromillions_stats.Padding = new Padding(2);
+            tabPage_euromillions_stats.Size = new Size(1000, 881);
+            tabPage_euromillions_stats.TabIndex = 1;
+            tabPage_euromillions_stats.Text = "Statistiques";
+            tabPage_euromillions_stats.UseVisualStyleBackColor = true;
             // 
             // listView_euromillions_stats_stars
             // 
@@ -176,7 +220,7 @@
             listView_euromillions_stats_stars.FullRowSelect = true;
             listView_euromillions_stats_stars.Location = new Point(462, 2);
             listView_euromillions_stats_stars.Name = "listView_euromillions_stats_stars";
-            listView_euromillions_stats_stars.Size = new Size(460, 874);
+            listView_euromillions_stats_stars.Size = new Size(460, 877);
             listView_euromillions_stats_stars.TabIndex = 1;
             listView_euromillions_stats_stars.UseCompatibleStateImageBehavior = false;
             listView_euromillions_stats_stars.View = View.Details;
@@ -203,7 +247,7 @@
             listView_euromillions_stats_balls.FullRowSelect = true;
             listView_euromillions_stats_balls.Location = new Point(2, 2);
             listView_euromillions_stats_balls.Name = "listView_euromillions_stats_balls";
-            listView_euromillions_stats_balls.Size = new Size(460, 874);
+            listView_euromillions_stats_balls.Size = new Size(460, 877);
             listView_euromillions_stats_balls.TabIndex = 0;
             listView_euromillions_stats_balls.UseCompatibleStateImageBehavior = false;
             listView_euromillions_stats_balls.View = View.Details;
@@ -299,6 +343,8 @@
             // 
             dateTimePicker_euromillions_filter_toDate.Dock = DockStyle.Left;
             dateTimePicker_euromillions_filter_toDate.Location = new Point(617, 10);
+            dateTimePicker_euromillions_filter_toDate.MaxDate = new DateTime(2100, 12, 31, 0, 0, 0, 0);
+            dateTimePicker_euromillions_filter_toDate.MinDate = new DateTime(2004, 2, 13, 0, 0, 0, 0);
             dateTimePicker_euromillions_filter_toDate.Name = "dateTimePicker_euromillions_filter_toDate";
             dateTimePicker_euromillions_filter_toDate.Size = new Size(366, 30);
             dateTimePicker_euromillions_filter_toDate.TabIndex = 8;
@@ -308,9 +354,12 @@
             // 
             dateTimePicker_euromillions_filter_date.Dock = DockStyle.Left;
             dateTimePicker_euromillions_filter_date.Location = new Point(251, 10);
+            dateTimePicker_euromillions_filter_date.MaxDate = new DateTime(2100, 12, 31, 0, 0, 0, 0);
+            dateTimePicker_euromillions_filter_date.MinDate = new DateTime(2004, 2, 13, 0, 0, 0, 0);
             dateTimePicker_euromillions_filter_date.Name = "dateTimePicker_euromillions_filter_date";
             dateTimePicker_euromillions_filter_date.Size = new Size(366, 30);
             dateTimePicker_euromillions_filter_date.TabIndex = 1;
+            dateTimePicker_euromillions_filter_date.Value = new DateTime(2004, 2, 13, 0, 0, 0, 0);
             dateTimePicker_euromillions_filter_date.Visible = false;
             // 
             // comboBox_euromillions_filter_dateType
@@ -392,6 +441,315 @@
             button_euromillions_filter_ok.Text = "Filtrer";
             button_euromillions_filter_ok.UseVisualStyleBackColor = true;
             // 
+            // tabPage2
+            // 
+            tabPage2.Controls.Add(tabControl1);
+            tabPage2.Controls.Add(panel5);
+            tabPage2.Location = new Point(4, 32);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(1012, 1107);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Loto";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabControl1
+            // 
+            tabControl1.Controls.Add(tabPage5);
+            tabControl1.Controls.Add(tabPage_loto_stats);
+            tabControl1.Dock = DockStyle.Fill;
+            tabControl1.Location = new Point(3, 192);
+            tabControl1.Margin = new Padding(2);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(1006, 912);
+            tabControl1.TabIndex = 3;
+            // 
+            // tabPage5
+            // 
+            tabPage5.Controls.Add(listView_loto_results_draws);
+            tabPage5.Location = new Point(4, 32);
+            tabPage5.Margin = new Padding(2);
+            tabPage5.Name = "tabPage5";
+            tabPage5.Padding = new Padding(2);
+            tabPage5.Size = new Size(998, 876);
+            tabPage5.TabIndex = 0;
+            tabPage5.Text = "Résultats";
+            tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // listView_loto_results_draws
+            // 
+            listView_loto_results_draws.Columns.AddRange(new ColumnHeader[] { columnHeader5, columnHeader6, columnHeader7, columnHeader8 });
+            listView_loto_results_draws.Dock = DockStyle.Fill;
+            listView_loto_results_draws.FullRowSelect = true;
+            listView_loto_results_draws.Location = new Point(2, 2);
+            listView_loto_results_draws.MultiSelect = false;
+            listView_loto_results_draws.Name = "listView_loto_results_draws";
+            listView_loto_results_draws.Size = new Size(994, 872);
+            listView_loto_results_draws.TabIndex = 0;
+            listView_loto_results_draws.UseCompatibleStateImageBehavior = false;
+            listView_loto_results_draws.View = View.Details;
+            // 
+            // columnHeader5
+            // 
+            columnHeader5.Text = "Date";
+            columnHeader5.Width = 150;
+            // 
+            // columnHeader6
+            // 
+            columnHeader6.Text = "Boules";
+            columnHeader6.Width = 200;
+            // 
+            // columnHeader7
+            // 
+            columnHeader7.Text = "Etoille";
+            columnHeader7.Width = 200;
+            // 
+            // columnHeader8
+            // 
+            columnHeader8.Text = "Gagnant";
+            columnHeader8.Width = 100;
+            // 
+            // tabPage_loto_stats
+            // 
+            tabPage_loto_stats.Controls.Add(listView_loto_stats_stars);
+            tabPage_loto_stats.Controls.Add(listView_loto_stats_balls);
+            tabPage_loto_stats.Location = new Point(4, 29);
+            tabPage_loto_stats.Margin = new Padding(2);
+            tabPage_loto_stats.Name = "tabPage_loto_stats";
+            tabPage_loto_stats.Padding = new Padding(2);
+            tabPage_loto_stats.Size = new Size(998, 879);
+            tabPage_loto_stats.TabIndex = 1;
+            tabPage_loto_stats.Text = "Statistiques";
+            tabPage_loto_stats.UseVisualStyleBackColor = true;
+            // 
+            // listView_loto_stats_stars
+            // 
+            listView_loto_stats_stars.Columns.AddRange(new ColumnHeader[] { columnHeader9, columnHeader10, columnHeader11 });
+            listView_loto_stats_stars.Dock = DockStyle.Left;
+            listView_loto_stats_stars.FullRowSelect = true;
+            listView_loto_stats_stars.Location = new Point(462, 2);
+            listView_loto_stats_stars.Name = "listView_loto_stats_stars";
+            listView_loto_stats_stars.Size = new Size(460, 875);
+            listView_loto_stats_stars.TabIndex = 1;
+            listView_loto_stats_stars.UseCompatibleStateImageBehavior = false;
+            listView_loto_stats_stars.View = View.Details;
+            // 
+            // columnHeader9
+            // 
+            columnHeader9.Text = "Etoiles";
+            columnHeader9.Width = 100;
+            // 
+            // columnHeader10
+            // 
+            columnHeader10.Text = "% de sorties";
+            columnHeader10.Width = 150;
+            // 
+            // columnHeader11
+            // 
+            columnHeader11.Text = "Nombre de sorties";
+            columnHeader11.Width = 180;
+            // 
+            // listView_loto_stats_balls
+            // 
+            listView_loto_stats_balls.Columns.AddRange(new ColumnHeader[] { columnHeader12, columnHeader13, columnHeader14 });
+            listView_loto_stats_balls.Dock = DockStyle.Left;
+            listView_loto_stats_balls.FullRowSelect = true;
+            listView_loto_stats_balls.Location = new Point(2, 2);
+            listView_loto_stats_balls.Name = "listView_loto_stats_balls";
+            listView_loto_stats_balls.Size = new Size(460, 875);
+            listView_loto_stats_balls.TabIndex = 0;
+            listView_loto_stats_balls.UseCompatibleStateImageBehavior = false;
+            listView_loto_stats_balls.View = View.Details;
+            // 
+            // columnHeader12
+            // 
+            columnHeader12.Text = "Boules";
+            columnHeader12.Width = 100;
+            // 
+            // columnHeader13
+            // 
+            columnHeader13.Text = "% de sorties";
+            columnHeader13.Width = 150;
+            // 
+            // columnHeader14
+            // 
+            columnHeader14.Text = "Nombre de sorties";
+            columnHeader14.Width = 180;
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(panel6);
+            panel5.Controls.Add(panel7);
+            panel5.Controls.Add(panel8);
+            panel5.Controls.Add(panel9);
+            panel5.Dock = DockStyle.Top;
+            panel5.Location = new Point(3, 3);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(1006, 189);
+            panel5.TabIndex = 2;
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(checkBox_loto_filter_hasWinner);
+            panel6.Controls.Add(checkBox_loto_filter_all);
+            panel6.Controls.Add(label4);
+            panel6.Dock = DockStyle.Top;
+            panel6.Location = new Point(0, 100);
+            panel6.Name = "panel6";
+            panel6.Padding = new Padding(0, 10, 0, 10);
+            panel6.Size = new Size(1006, 50);
+            panel6.TabIndex = 11;
+            // 
+            // checkBox_loto_filter_hasWinner
+            // 
+            checkBox_loto_filter_hasWinner.AutoSize = true;
+            checkBox_loto_filter_hasWinner.Dock = DockStyle.Left;
+            checkBox_loto_filter_hasWinner.Location = new Point(173, 10);
+            checkBox_loto_filter_hasWinner.Name = "checkBox_loto_filter_hasWinner";
+            checkBox_loto_filter_hasWinner.Size = new Size(107, 30);
+            checkBox_loto_filter_hasWinner.TabIndex = 5;
+            checkBox_loto_filter_hasWinner.Text = "Gagnant";
+            checkBox_loto_filter_hasWinner.UseVisualStyleBackColor = true;
+            checkBox_loto_filter_hasWinner.Visible = false;
+            // 
+            // checkBox_loto_filter_all
+            // 
+            checkBox_loto_filter_all.AutoSize = true;
+            checkBox_loto_filter_all.Checked = true;
+            checkBox_loto_filter_all.CheckState = CheckState.Checked;
+            checkBox_loto_filter_all.Dock = DockStyle.Left;
+            checkBox_loto_filter_all.Location = new Point(100, 10);
+            checkBox_loto_filter_all.Name = "checkBox_loto_filter_all";
+            checkBox_loto_filter_all.Size = new Size(73, 30);
+            checkBox_loto_filter_all.TabIndex = 4;
+            checkBox_loto_filter_all.Text = "Tous";
+            checkBox_loto_filter_all.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            label4.Dock = DockStyle.Left;
+            label4.Location = new Point(0, 10);
+            label4.Name = "label4";
+            label4.Size = new Size(100, 30);
+            label4.TabIndex = 2;
+            label4.Text = "Gagnant";
+            label4.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(dateTimePicker_loto_filter_toDate);
+            panel7.Controls.Add(dateTimePicker_loto_filter_date);
+            panel7.Controls.Add(comboBox_loto_filter_dateType);
+            panel7.Controls.Add(label5);
+            panel7.Dock = DockStyle.Top;
+            panel7.Location = new Point(0, 50);
+            panel7.Name = "panel7";
+            panel7.Padding = new Padding(0, 10, 0, 10);
+            panel7.Size = new Size(1006, 50);
+            panel7.TabIndex = 10;
+            // 
+            // dateTimePicker_loto_filter_toDate
+            // 
+            dateTimePicker_loto_filter_toDate.Dock = DockStyle.Left;
+            dateTimePicker_loto_filter_toDate.Location = new Point(617, 10);
+            dateTimePicker_loto_filter_toDate.MaxDate = new DateTime(2100, 12, 31, 0, 0, 0, 0);
+            dateTimePicker_loto_filter_toDate.MinDate = new DateTime(2008, 10, 6, 0, 0, 0, 0);
+            dateTimePicker_loto_filter_toDate.Name = "dateTimePicker_loto_filter_toDate";
+            dateTimePicker_loto_filter_toDate.Size = new Size(366, 30);
+            dateTimePicker_loto_filter_toDate.TabIndex = 8;
+            dateTimePicker_loto_filter_toDate.Visible = false;
+            // 
+            // dateTimePicker_loto_filter_date
+            // 
+            dateTimePicker_loto_filter_date.Dock = DockStyle.Left;
+            dateTimePicker_loto_filter_date.Location = new Point(251, 10);
+            dateTimePicker_loto_filter_date.MaxDate = new DateTime(2100, 12, 31, 0, 0, 0, 0);
+            dateTimePicker_loto_filter_date.MinDate = new DateTime(2008, 10, 6, 0, 0, 0, 0);
+            dateTimePicker_loto_filter_date.Name = "dateTimePicker_loto_filter_date";
+            dateTimePicker_loto_filter_date.Size = new Size(366, 30);
+            dateTimePicker_loto_filter_date.TabIndex = 1;
+            dateTimePicker_loto_filter_date.Visible = false;
+            // 
+            // comboBox_loto_filter_dateType
+            // 
+            comboBox_loto_filter_dateType.Dock = DockStyle.Left;
+            comboBox_loto_filter_dateType.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox_loto_filter_dateType.Location = new Point(100, 10);
+            comboBox_loto_filter_dateType.Name = "comboBox_loto_filter_dateType";
+            comboBox_loto_filter_dateType.Size = new Size(151, 31);
+            comboBox_loto_filter_dateType.TabIndex = 7;
+            // 
+            // label5
+            // 
+            label5.Dock = DockStyle.Left;
+            label5.Location = new Point(0, 10);
+            label5.Name = "label5";
+            label5.Size = new Size(100, 30);
+            label5.TabIndex = 3;
+            label5.Text = "Date";
+            label5.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // panel8
+            // 
+            panel8.Controls.Add(numericUpDown_loto_filter_id);
+            panel8.Controls.Add(label6);
+            panel8.Dock = DockStyle.Top;
+            panel8.Location = new Point(0, 0);
+            panel8.Name = "panel8";
+            panel8.Padding = new Padding(0, 10, 0, 10);
+            panel8.Size = new Size(1006, 50);
+            panel8.TabIndex = 9;
+            // 
+            // numericUpDown_loto_filter_id
+            // 
+            numericUpDown_loto_filter_id.Dock = DockStyle.Left;
+            numericUpDown_loto_filter_id.Location = new Point(100, 10);
+            numericUpDown_loto_filter_id.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            numericUpDown_loto_filter_id.Name = "numericUpDown_loto_filter_id";
+            numericUpDown_loto_filter_id.Size = new Size(150, 30);
+            numericUpDown_loto_filter_id.TabIndex = 0;
+            // 
+            // label6
+            // 
+            label6.Dock = DockStyle.Left;
+            label6.Location = new Point(0, 10);
+            label6.Name = "label6";
+            label6.Size = new Size(100, 30);
+            label6.TabIndex = 2;
+            label6.Text = "ID";
+            label6.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // panel9
+            // 
+            panel9.Controls.Add(label_loto_filter_resultCount);
+            panel9.Controls.Add(button_loto_filter_ok);
+            panel9.Dock = DockStyle.Bottom;
+            panel9.Location = new Point(0, 149);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(1006, 40);
+            panel9.TabIndex = 6;
+            // 
+            // label_loto_filter_resultCount
+            // 
+            label_loto_filter_resultCount.Dock = DockStyle.Right;
+            label_loto_filter_resultCount.Location = new Point(486, 0);
+            label_loto_filter_resultCount.Name = "label_loto_filter_resultCount";
+            label_loto_filter_resultCount.Size = new Size(426, 40);
+            label_loto_filter_resultCount.TabIndex = 1;
+            label_loto_filter_resultCount.Text = "0 résultat";
+            label_loto_filter_resultCount.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // button_loto_filter_ok
+            // 
+            button_loto_filter_ok.Dock = DockStyle.Right;
+            button_loto_filter_ok.Location = new Point(912, 0);
+            button_loto_filter_ok.Name = "button_loto_filter_ok";
+            button_loto_filter_ok.Size = new Size(94, 40);
+            button_loto_filter_ok.TabIndex = 0;
+            button_loto_filter_ok.Text = "Filtrer";
+            button_loto_filter_ok.UseVisualStyleBackColor = true;
+            // 
             // form
             // 
             AutoScaleDimensions = new SizeF(11F, 23F);
@@ -407,7 +765,7 @@
             tabPage1.ResumeLayout(false);
             tabControl_euromillions.ResumeLayout(false);
             tabPage3.ResumeLayout(false);
-            tabPage4.ResumeLayout(false);
+            tabPage_euromillions_stats.ResumeLayout(false);
             panel_euromillions_filter.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
@@ -415,6 +773,17 @@
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)numericUpDown_euromillions_filter_id).EndInit();
             panel1.ResumeLayout(false);
+            tabPage2.ResumeLayout(false);
+            tabControl1.ResumeLayout(false);
+            tabPage5.ResumeLayout(false);
+            tabPage_loto_stats.ResumeLayout(false);
+            panel5.ResumeLayout(false);
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            panel7.ResumeLayout(false);
+            panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)numericUpDown_loto_filter_id).EndInit();
+            panel9.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -424,7 +793,7 @@
         private TabPage tabPage1;
         private TabControl tabControl_euromillions;
         private TabPage tabPage3;
-        private TabPage tabPage4;
+        private TabPage tabPage_euromillions_stats;
         private ListView listView_euromillions_results_draws;
         private ColumnHeader columnHeader_date;
         private ColumnHeader columnHeader_balls;
@@ -454,5 +823,38 @@
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader4;
         private ColumnHeader columnHeader3;
+        private TabPage tabPage2;
+        private Panel panel5;
+        private Panel panel6;
+        private CheckBox checkBox_loto_filter_hasWinner;
+        private CheckBox checkBox_loto_filter_all;
+        private Label label4;
+        private Panel panel7;
+        private DateTimePicker dateTimePicker_loto_filter_toDate;
+        private DateTimePicker dateTimePicker_loto_filter_date;
+        private ComboBox comboBox_loto_filter_dateType;
+        private Label label5;
+        private Panel panel8;
+        private NumericUpDown numericUpDown_loto_filter_id;
+        private Label label6;
+        private Panel panel9;
+        private Label label_loto_filter_resultCount;
+        private Button button_loto_filter_ok;
+        private TabControl tabControl1;
+        private TabPage tabPage5;
+        private ListView listView_loto_results_draws;
+        private ColumnHeader columnHeader5;
+        private ColumnHeader columnHeader6;
+        private ColumnHeader columnHeader7;
+        private ColumnHeader columnHeader8;
+        private TabPage tabPage_loto_stats;
+        private ListView listView_loto_stats_stars;
+        private ColumnHeader columnHeader9;
+        private ColumnHeader columnHeader10;
+        private ColumnHeader columnHeader11;
+        private ListView listView_loto_stats_balls;
+        private ColumnHeader columnHeader12;
+        private ColumnHeader columnHeader13;
+        private ColumnHeader columnHeader14;
     }
 }
