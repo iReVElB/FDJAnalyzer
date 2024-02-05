@@ -10,10 +10,10 @@ using System.Web;
 
 namespace FDJAnalyzer
 {
-    internal class EuroMillionsManager
+    internal class KenoManager
     {
         public static string[] DateTypes = { "Toutes", "Le", "Entre", "Après", "Avant" };
-        private static string base_link_api = $"{Config.FDJApiLink}euromillions/draws";
+        private static string base_link_api = $"{Config.FDJApiLink}keno/draws";
 
         public async Task<Result> GetResult(Parameters? parameters)
         {
@@ -21,14 +21,12 @@ namespace FDJAnalyzer
             List<Draw>? draws = await getDraws(parameters);
             result.draws = draws;
             IDictionary<int, int> balls_count = new Dictionary<int, int>();
-            IDictionary<int, int> stars_count = new Dictionary<int, int>();
             if (draws != null)
             {
                 for(int i = 0;  i < draws.Count; i++)
                 {
                     Draw draw = draws[i];
                     int[]? balls = draw.balls;
-                    int[]? stars = draw.stars;
                     if(balls != null)
                     {
                         for(int b = 0; b < balls.Length; b++)
@@ -39,29 +37,11 @@ namespace FDJAnalyzer
                             stats.total++;
                         }
                     }
-                    if(stars != null)
-                    {
-                        for(int s = 0; s < stars.Length; s++)
-                        {
-                            int star = stars[s];
-                            Result.Stats stats = result.starsStats;
-                            if (stars_count.ContainsKey(star)) { stars_count[star]++; } else { stars_count.Add(star, 1); }
-                            stats.total++;
-                        }
-                    }
                 }
                 for(int i = 0; i < balls_count.Count; i++)
                 {
                     Result.Stats stats = result.ballsStats;
                     KeyValuePair<int, int> keyValuePair = balls_count.ElementAt(i);
-                    float per = (float)keyValuePair.Value / stats.total;
-                    KeyValuePair<int, KeyValuePair<int, float>> item = new KeyValuePair<int, KeyValuePair<int, float>>(keyValuePair.Key, new KeyValuePair<int, float>(keyValuePair.Value, per));
-                    stats.stats.Add(item);
-                }
-                for(int i = 0; i < stars_count.Count; i++)
-                {
-                    Result.Stats stats = result.starsStats;
-                    KeyValuePair<int, int> keyValuePair = stars_count.ElementAt(i);
                     float per = (float)keyValuePair.Value / stats.total;
                     KeyValuePair<int, KeyValuePair<int, float>> item = new KeyValuePair<int, KeyValuePair<int, float>>(keyValuePair.Key, new KeyValuePair<int, float>(keyValuePair.Value, per));
                     stats.stats.Add(item);
@@ -80,7 +60,6 @@ namespace FDJAnalyzer
                 nameValueCollection.Add("DateType", ((int?)parameters.DateType).ToString());
                 if (parameters.Date != null) { nameValueCollection.Add("Date", parameters.Date.Value.ToString("yyyy-MM-dd")); }
                 if (parameters.ToDate != null) { nameValueCollection.Add("ToDate", parameters.ToDate.Value.ToString("yyyy-MM-dd")); }
-                nameValueCollection.Add("HasWinner", parameters.HasWinner.ToString());
             }
             link += $"?{nameValueCollection.ToString()}";
             Debug.WriteLine(link);
@@ -94,7 +73,6 @@ namespace FDJAnalyzer
         {
             public List<Draw>? draws {  get; set; }
             public Stats ballsStats = new Stats();
-            public Stats starsStats = new Stats();
             public class Stats
             {
                 public List<KeyValuePair<int, KeyValuePair<int, float>>> stats = new List<KeyValuePair<int, KeyValuePair<int, float>>>();
@@ -109,7 +87,6 @@ namespace FDJAnalyzer
             public DateType? DateType { get; set; }
             public DateOnly? Date { get; set; }
             public DateOnly? ToDate { get; set; }
-            public int? HasWinner { get; set; }
         }
         public enum DateType
         {
@@ -123,11 +100,8 @@ namespace FDJAnalyzer
         {
             public int? id { get; set; }
             public string? date { get; set; }
-            public bool? hasWinner { get; set; }
             public int[]? balls { get; set; }
-            public int[]? stars { get; set; }
         }
-
     }
 
 

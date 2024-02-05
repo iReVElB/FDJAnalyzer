@@ -13,7 +13,7 @@ namespace FDJAnalyzer
     internal class LotoManager
     {
         public static string[] DateTypes = { "Toutes", "Le", "Entre", "Après", "Avant" };
-        private static string base_link_api = "http://127.0.0.1:4000/api/loto/draws";
+        private static string base_link_api = $"{Config.FDJApiLink}loto/draws";
 
         public async Task<Result> GetResult(Parameters? parameters)
         {

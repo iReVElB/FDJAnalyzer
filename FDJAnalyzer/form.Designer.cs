@@ -95,6 +95,29 @@
             panel9 = new Panel();
             label_loto_filter_resultCount = new Label();
             button_loto_filter_ok = new Button();
+            tabPage4 = new TabPage();
+            tabControl2 = new TabControl();
+            tabPage6 = new TabPage();
+            listView_keno_results_draws = new ListView();
+            columnHeader15 = new ColumnHeader();
+            columnHeader16 = new ColumnHeader();
+            tabPage7 = new TabPage();
+            listView_keno_stats_balls = new ListView();
+            columnHeader22 = new ColumnHeader();
+            columnHeader23 = new ColumnHeader();
+            columnHeader24 = new ColumnHeader();
+            panel13 = new Panel();
+            panel12 = new Panel();
+            label_keno_filter_resultCount = new Label();
+            button_keno_filter_ok = new Button();
+            panel11 = new Panel();
+            dateTimePicker_keno_filter_toDate = new DateTimePicker();
+            dateTimePicker_keno_filter_date = new DateTimePicker();
+            comboBox_keno_filter_dateType = new ComboBox();
+            label8 = new Label();
+            panel10 = new Panel();
+            numericUpDown_keno_filter_id = new NumericUpDown();
+            label7 = new Label();
             tabControl_base.SuspendLayout();
             tabPage1.SuspendLayout();
             tabControl_euromillions.SuspendLayout();
@@ -116,12 +139,22 @@
             panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_loto_filter_id).BeginInit();
             panel9.SuspendLayout();
+            tabPage4.SuspendLayout();
+            tabControl2.SuspendLayout();
+            tabPage6.SuspendLayout();
+            tabPage7.SuspendLayout();
+            panel13.SuspendLayout();
+            panel12.SuspendLayout();
+            panel11.SuspendLayout();
+            panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown_keno_filter_id).BeginInit();
             SuspendLayout();
             // 
             // tabControl_base
             // 
             tabControl_base.Controls.Add(tabPage1);
             tabControl_base.Controls.Add(tabPage2);
+            tabControl_base.Controls.Add(tabPage4);
             tabControl_base.Dock = DockStyle.Fill;
             tabControl_base.Location = new Point(0, 0);
             tabControl_base.Margin = new Padding(2);
@@ -445,10 +478,10 @@
             // 
             tabPage2.Controls.Add(tabControl1);
             tabPage2.Controls.Add(panel5);
-            tabPage2.Location = new Point(4, 32);
+            tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1012, 1107);
+            tabPage2.Size = new Size(1012, 1110);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Loto";
             tabPage2.UseVisualStyleBackColor = true;
@@ -462,7 +495,7 @@
             tabControl1.Margin = new Padding(2);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1006, 912);
+            tabControl1.Size = new Size(1006, 915);
             tabControl1.TabIndex = 3;
             // 
             // tabPage5
@@ -472,7 +505,7 @@
             tabPage5.Margin = new Padding(2);
             tabPage5.Name = "tabPage5";
             tabPage5.Padding = new Padding(2);
-            tabPage5.Size = new Size(998, 876);
+            tabPage5.Size = new Size(998, 879);
             tabPage5.TabIndex = 0;
             tabPage5.Text = "Résultats";
             tabPage5.UseVisualStyleBackColor = true;
@@ -485,7 +518,7 @@
             listView_loto_results_draws.Location = new Point(2, 2);
             listView_loto_results_draws.MultiSelect = false;
             listView_loto_results_draws.Name = "listView_loto_results_draws";
-            listView_loto_results_draws.Size = new Size(994, 872);
+            listView_loto_results_draws.Size = new Size(994, 875);
             listView_loto_results_draws.TabIndex = 0;
             listView_loto_results_draws.UseCompatibleStateImageBehavior = false;
             listView_loto_results_draws.View = View.Details;
@@ -518,7 +551,7 @@
             tabPage_loto_stats.Margin = new Padding(2);
             tabPage_loto_stats.Name = "tabPage_loto_stats";
             tabPage_loto_stats.Padding = new Padding(2);
-            tabPage_loto_stats.Size = new Size(998, 879);
+            tabPage_loto_stats.Size = new Size(998, 882);
             tabPage_loto_stats.TabIndex = 1;
             tabPage_loto_stats.Text = "Statistiques";
             tabPage_loto_stats.UseVisualStyleBackColor = true;
@@ -530,7 +563,7 @@
             listView_loto_stats_stars.FullRowSelect = true;
             listView_loto_stats_stars.Location = new Point(462, 2);
             listView_loto_stats_stars.Name = "listView_loto_stats_stars";
-            listView_loto_stats_stars.Size = new Size(460, 875);
+            listView_loto_stats_stars.Size = new Size(460, 878);
             listView_loto_stats_stars.TabIndex = 1;
             listView_loto_stats_stars.UseCompatibleStateImageBehavior = false;
             listView_loto_stats_stars.View = View.Details;
@@ -557,7 +590,7 @@
             listView_loto_stats_balls.FullRowSelect = true;
             listView_loto_stats_balls.Location = new Point(2, 2);
             listView_loto_stats_balls.Name = "listView_loto_stats_balls";
-            listView_loto_stats_balls.Size = new Size(460, 875);
+            listView_loto_stats_balls.Size = new Size(460, 878);
             listView_loto_stats_balls.TabIndex = 0;
             listView_loto_stats_balls.UseCompatibleStateImageBehavior = false;
             listView_loto_stats_balls.View = View.Details;
@@ -750,6 +783,229 @@
             button_loto_filter_ok.Text = "Filtrer";
             button_loto_filter_ok.UseVisualStyleBackColor = true;
             // 
+            // tabPage4
+            // 
+            tabPage4.Controls.Add(tabControl2);
+            tabPage4.Controls.Add(panel13);
+            tabPage4.Location = new Point(4, 32);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Size = new Size(1012, 1107);
+            tabPage4.TabIndex = 2;
+            tabPage4.Text = "Keno";
+            tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabControl2
+            // 
+            tabControl2.Controls.Add(tabPage6);
+            tabControl2.Controls.Add(tabPage7);
+            tabControl2.Dock = DockStyle.Fill;
+            tabControl2.Location = new Point(0, 144);
+            tabControl2.Margin = new Padding(2);
+            tabControl2.Name = "tabControl2";
+            tabControl2.SelectedIndex = 0;
+            tabControl2.Size = new Size(1012, 963);
+            tabControl2.TabIndex = 14;
+            // 
+            // tabPage6
+            // 
+            tabPage6.Controls.Add(listView_keno_results_draws);
+            tabPage6.Location = new Point(4, 32);
+            tabPage6.Margin = new Padding(2);
+            tabPage6.Name = "tabPage6";
+            tabPage6.Padding = new Padding(2);
+            tabPage6.Size = new Size(1004, 927);
+            tabPage6.TabIndex = 0;
+            tabPage6.Text = "Résultats";
+            tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // listView_keno_results_draws
+            // 
+            listView_keno_results_draws.Columns.AddRange(new ColumnHeader[] { columnHeader15, columnHeader16 });
+            listView_keno_results_draws.Dock = DockStyle.Fill;
+            listView_keno_results_draws.FullRowSelect = true;
+            listView_keno_results_draws.Location = new Point(2, 2);
+            listView_keno_results_draws.MultiSelect = false;
+            listView_keno_results_draws.Name = "listView_keno_results_draws";
+            listView_keno_results_draws.Size = new Size(1000, 923);
+            listView_keno_results_draws.TabIndex = 0;
+            listView_keno_results_draws.UseCompatibleStateImageBehavior = false;
+            listView_keno_results_draws.View = View.Details;
+            // 
+            // columnHeader15
+            // 
+            columnHeader15.Text = "Date";
+            columnHeader15.Width = 180;
+            // 
+            // columnHeader16
+            // 
+            columnHeader16.Text = "Boules";
+            columnHeader16.Width = 600;
+            // 
+            // tabPage7
+            // 
+            tabPage7.Controls.Add(listView_keno_stats_balls);
+            tabPage7.Location = new Point(4, 29);
+            tabPage7.Margin = new Padding(2);
+            tabPage7.Name = "tabPage7";
+            tabPage7.Padding = new Padding(2);
+            tabPage7.Size = new Size(1004, 930);
+            tabPage7.TabIndex = 1;
+            tabPage7.Text = "Statistiques";
+            tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // listView_keno_stats_balls
+            // 
+            listView_keno_stats_balls.Columns.AddRange(new ColumnHeader[] { columnHeader22, columnHeader23, columnHeader24 });
+            listView_keno_stats_balls.Dock = DockStyle.Fill;
+            listView_keno_stats_balls.FullRowSelect = true;
+            listView_keno_stats_balls.Location = new Point(2, 2);
+            listView_keno_stats_balls.Name = "listView_keno_stats_balls";
+            listView_keno_stats_balls.Size = new Size(1000, 926);
+            listView_keno_stats_balls.TabIndex = 0;
+            listView_keno_stats_balls.UseCompatibleStateImageBehavior = false;
+            listView_keno_stats_balls.View = View.Details;
+            // 
+            // columnHeader22
+            // 
+            columnHeader22.Text = "Boules";
+            columnHeader22.Width = 100;
+            // 
+            // columnHeader23
+            // 
+            columnHeader23.Text = "% de sorties";
+            columnHeader23.Width = 150;
+            // 
+            // columnHeader24
+            // 
+            columnHeader24.Text = "Nombre de sorties";
+            columnHeader24.Width = 180;
+            // 
+            // panel13
+            // 
+            panel13.Controls.Add(panel12);
+            panel13.Controls.Add(panel11);
+            panel13.Controls.Add(panel10);
+            panel13.Dock = DockStyle.Top;
+            panel13.Location = new Point(0, 0);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(1012, 144);
+            panel13.TabIndex = 13;
+            // 
+            // panel12
+            // 
+            panel12.Controls.Add(label_keno_filter_resultCount);
+            panel12.Controls.Add(button_keno_filter_ok);
+            panel12.Dock = DockStyle.Bottom;
+            panel12.Location = new Point(0, 104);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(1012, 40);
+            panel12.TabIndex = 13;
+            // 
+            // label_keno_filter_resultCount
+            // 
+            label_keno_filter_resultCount.Dock = DockStyle.Right;
+            label_keno_filter_resultCount.Location = new Point(492, 0);
+            label_keno_filter_resultCount.Name = "label_keno_filter_resultCount";
+            label_keno_filter_resultCount.Size = new Size(426, 40);
+            label_keno_filter_resultCount.TabIndex = 1;
+            label_keno_filter_resultCount.Text = "0 résultat";
+            label_keno_filter_resultCount.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // button_keno_filter_ok
+            // 
+            button_keno_filter_ok.Dock = DockStyle.Right;
+            button_keno_filter_ok.Location = new Point(918, 0);
+            button_keno_filter_ok.Name = "button_keno_filter_ok";
+            button_keno_filter_ok.Size = new Size(94, 40);
+            button_keno_filter_ok.TabIndex = 0;
+            button_keno_filter_ok.Text = "Filtrer";
+            button_keno_filter_ok.UseVisualStyleBackColor = true;
+            // 
+            // panel11
+            // 
+            panel11.Controls.Add(dateTimePicker_keno_filter_toDate);
+            panel11.Controls.Add(dateTimePicker_keno_filter_date);
+            panel11.Controls.Add(comboBox_keno_filter_dateType);
+            panel11.Controls.Add(label8);
+            panel11.Dock = DockStyle.Top;
+            panel11.Location = new Point(0, 50);
+            panel11.Name = "panel11";
+            panel11.Padding = new Padding(0, 10, 0, 10);
+            panel11.Size = new Size(1012, 50);
+            panel11.TabIndex = 12;
+            // 
+            // dateTimePicker_keno_filter_toDate
+            // 
+            dateTimePicker_keno_filter_toDate.Dock = DockStyle.Left;
+            dateTimePicker_keno_filter_toDate.Location = new Point(617, 10);
+            dateTimePicker_keno_filter_toDate.MaxDate = new DateTime(2100, 12, 31, 0, 0, 0, 0);
+            dateTimePicker_keno_filter_toDate.MinDate = new DateTime(2004, 2, 13, 0, 0, 0, 0);
+            dateTimePicker_keno_filter_toDate.Name = "dateTimePicker_keno_filter_toDate";
+            dateTimePicker_keno_filter_toDate.Size = new Size(366, 30);
+            dateTimePicker_keno_filter_toDate.TabIndex = 8;
+            dateTimePicker_keno_filter_toDate.Visible = false;
+            // 
+            // dateTimePicker_keno_filter_date
+            // 
+            dateTimePicker_keno_filter_date.Dock = DockStyle.Left;
+            dateTimePicker_keno_filter_date.Location = new Point(251, 10);
+            dateTimePicker_keno_filter_date.MaxDate = new DateTime(2100, 12, 31, 0, 0, 0, 0);
+            dateTimePicker_keno_filter_date.MinDate = new DateTime(2004, 2, 13, 0, 0, 0, 0);
+            dateTimePicker_keno_filter_date.Name = "dateTimePicker_keno_filter_date";
+            dateTimePicker_keno_filter_date.Size = new Size(366, 30);
+            dateTimePicker_keno_filter_date.TabIndex = 1;
+            dateTimePicker_keno_filter_date.Value = new DateTime(2004, 2, 13, 0, 0, 0, 0);
+            dateTimePicker_keno_filter_date.Visible = false;
+            // 
+            // comboBox_keno_filter_dateType
+            // 
+            comboBox_keno_filter_dateType.Dock = DockStyle.Left;
+            comboBox_keno_filter_dateType.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox_keno_filter_dateType.Location = new Point(100, 10);
+            comboBox_keno_filter_dateType.Name = "comboBox_keno_filter_dateType";
+            comboBox_keno_filter_dateType.Size = new Size(151, 31);
+            comboBox_keno_filter_dateType.TabIndex = 7;
+            // 
+            // label8
+            // 
+            label8.Dock = DockStyle.Left;
+            label8.Location = new Point(0, 10);
+            label8.Name = "label8";
+            label8.Size = new Size(100, 30);
+            label8.TabIndex = 3;
+            label8.Text = "Date";
+            label8.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // panel10
+            // 
+            panel10.Controls.Add(numericUpDown_keno_filter_id);
+            panel10.Controls.Add(label7);
+            panel10.Dock = DockStyle.Top;
+            panel10.Location = new Point(0, 0);
+            panel10.Name = "panel10";
+            panel10.Padding = new Padding(0, 10, 0, 10);
+            panel10.Size = new Size(1012, 50);
+            panel10.TabIndex = 11;
+            // 
+            // numericUpDown_keno_filter_id
+            // 
+            numericUpDown_keno_filter_id.Dock = DockStyle.Left;
+            numericUpDown_keno_filter_id.Location = new Point(100, 10);
+            numericUpDown_keno_filter_id.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            numericUpDown_keno_filter_id.Name = "numericUpDown_keno_filter_id";
+            numericUpDown_keno_filter_id.Size = new Size(150, 30);
+            numericUpDown_keno_filter_id.TabIndex = 0;
+            // 
+            // label7
+            // 
+            label7.Dock = DockStyle.Left;
+            label7.Location = new Point(0, 10);
+            label7.Name = "label7";
+            label7.Size = new Size(100, 30);
+            label7.TabIndex = 2;
+            label7.Text = "ID";
+            label7.TextAlign = ContentAlignment.MiddleLeft;
+            // 
             // form
             // 
             AutoScaleDimensions = new SizeF(11F, 23F);
@@ -784,6 +1040,15 @@
             panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)numericUpDown_loto_filter_id).EndInit();
             panel9.ResumeLayout(false);
+            tabPage4.ResumeLayout(false);
+            tabControl2.ResumeLayout(false);
+            tabPage6.ResumeLayout(false);
+            tabPage7.ResumeLayout(false);
+            panel13.ResumeLayout(false);
+            panel12.ResumeLayout(false);
+            panel11.ResumeLayout(false);
+            panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)numericUpDown_keno_filter_id).EndInit();
             ResumeLayout(false);
         }
 
@@ -800,9 +1065,7 @@
         private ColumnHeader columnHeader_stars;
         private ColumnHeader columnHeader_has_winner;
         private Panel panel_euromillions_filter;
-        private NumericUpDown numericUpDown_euromillions_filter_id;
         private DateTimePicker dateTimePicker_euromillions_filter_date;
-        private Label label1;
         private Label label2;
         private CheckBox checkBox_euromillions_filter_all;
         private CheckBox checkBox_euromillions_filter_hasWinner;
@@ -810,7 +1073,6 @@
         private Button button_euromillions_filter_ok;
         private ComboBox comboBox_euromillions_filter_dateType;
         private DateTimePicker dateTimePicker_euromillions_filter_toDate;
-        private Panel panel2;
         private Panel panel3;
         private Panel panel4;
         private Label label3;
@@ -856,5 +1118,31 @@
         private ColumnHeader columnHeader12;
         private ColumnHeader columnHeader13;
         private ColumnHeader columnHeader14;
+        private TabPage tabPage4;
+        private Panel panel2;
+        private NumericUpDown numericUpDown_euromillions_filter_id;
+        private Label label1;
+        private Panel panel13;
+        private Panel panel12;
+        private Label label_keno_filter_resultCount;
+        private Button button_keno_filter_ok;
+        private Panel panel11;
+        private DateTimePicker dateTimePicker_keno_filter_toDate;
+        private DateTimePicker dateTimePicker_keno_filter_date;
+        private ComboBox comboBox_keno_filter_dateType;
+        private Label label8;
+        private Panel panel10;
+        private NumericUpDown numericUpDown_keno_filter_id;
+        private Label label7;
+        private TabControl tabControl2;
+        private TabPage tabPage6;
+        private ListView listView_keno_results_draws;
+        private ColumnHeader columnHeader15;
+        private ColumnHeader columnHeader16;
+        private TabPage tabPage7;
+        private ListView listView_keno_stats_balls;
+        private ColumnHeader columnHeader22;
+        private ColumnHeader columnHeader23;
+        private ColumnHeader columnHeader24;
     }
 }
